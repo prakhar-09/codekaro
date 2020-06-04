@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Code Karo</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	
+	<!-- Flaticons  -->
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		
+	<div class="colorlib-loader"></div>
+
+	<div id="page">
+		<nav class="colorlib-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2">
+							<div id="colorlib-logo"><a href="index.html">Code Karo</a></div>
+						</div>
+						<div class="col-xs-10 text-right menu-1">
+							<ul>
+								<li><a href="index.html">Home</a></li>
+								<li class="has-dropdown">
+									<a href="blog.html">Blog</a>
+									<ul class="dropdown">
+										<li><a href="single.html">Blog Single</a></li>
+										<li><a href="#">Technology</a></li>
+										<li><a href="#">Social</a></li>
+										<li><a href="#">Hackathons</a></li>
+									</ul>
+								</li>
+								<li class="has-dropdown">
+									<a href="travel.html">MCQ's</a>
+									<ul class="dropdown">
+										<li><a href="travel.html">CSE101</a></li>
+										<li><a href="#">MTH165</a></li>
+										<li><a href="#">MTH166</a></li>
+										<li><a href="#">MEC107</a></li>
+									</ul>
+								<li><a href="event.html">Events</a></li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<aside id="colorlib-breadcrumbs">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 breadcrumbs text-center">
+						<h2></h2>
+						<p><span><a href="index.html">Home</a></span> / <span>Why ++i operator is better than i++ operator!</span></p>
+					</div>
+				</div>
+			</div>
+		</aside>
+
+		<div id="colorlib-container">
+			<div class="container">
+				<div class="row">
+					
+					<div >
+						<h1 align="center">Why ++i operator is better than i++ operator!</h1> 
+						
+						<blockquote>
+							<h3>INTRODUCTION</h3>
+
+
+					
+						</blockquote>
+						<p>If a person had ever written a for-loop before, then he would have definitely used i++ operator to increment the loop variable.
+However, have you ever thought, that why we use it like that only?<br>
+It's quite clear that the end result of i++ would be one higher than the orignal, but it would be same in the case of ++i and i = i+1 also.<br>
+In this blog, I would discuss about  two methods of adding 1, i.e  i++ or post-increment and ++i or pre-increment and would explain why ++i is better than i++ in most cases.</p>
+
+
+<div class="col-md-6" >
+						<img class="img-responsive" src="images/blog2_1.jpg" alt="">
+					</div>
+					<h3>Post Increment (i++)</h3>
+						<p class="first-letra">It is the most common method used to increment values in a for loop.
+The post increment operators for variable i looks roughly like this when used in a pseudocode-<br>
+<mark>int k =i ;<br>
+i =  i + 1;<br>
+return k;<br></mark>
+Since the post increment operator has to return the original value of i and not the incremented value i+1,  therefore it has to store the older version of i.<br>
+This means that it is storing the older versions of i needlessly and is only increasing the memory of the pseudocode, since in most cases we doesn't generally use the old version of i, and it is simply discarded.</p>
+
+<h3>Pre Increment (++i)</h3>
+						<p class="first-letra">This method is much less common than the post increment method and is mostly used by old programmers in languages such as C &   C++.<br>
+The pseudocode, for ++i or Pre-Increment method for variable i looks roughly as follows-<br>
+<mark>i = i + 1;<br>
+return i;<br></mark>
+Particularly, here we do not have to save the older version of i. We can clearly add to it and then return. This matches better with the typical use case in a for-loop, since we rarely need the old value of i in later stages of the code.</p>
+<h3>Admonition</h3>
+						
+						<p class="first-letra">After discussing the differences between <mark> i++</mark> and <mark>++i</mark>, one might easily notice that, since the cached value of i is never used in <mark>i++</mark> method, the compiler will just optimize that line away, making both the operators equivalent.
+This is most likely true for primitive data types like float and integer.
+However, for more complex types of code, where the + operator is overloaded, the compiler may not be able to safely optimize the  caching operation.<br>
+So, we can finally conclude and say that <mark>++i</mark> or Pre-Increment operator is better than, or at most equal to <mark>i++</mark> or Post-Increment operator in most cases. It not only reduces the memory required and makes the execution of code faster but also plays a major role in reducing carbon-footprints.</p>
+<br><br>
+
+<h4>By- Prakhar Saxena</h4>
+
+						<p>
+							<ul class="colorlib-social-icons">
+								<li><a href="https://instagram.com/prakhar.saxenaa?igshid=7vdxoykkqm7v"><i class="icon-instagram"></i></a></li>
+								<li><a href="https://www.linkedin.com/in/prakhar9saxena"><i class="icon-linkedin"></i></a></li>
+								<li><a href="https://twitter.com/Prakhar81574399?s=09"><i class="icon-twitter"></i></a></li>
+								
+
+							</ul>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+		<footer id="colorlib-footer" role="contentinfo">
+			<div class="container">
+				<div class="row row-pb-md">
+					<div class="col-md-3">
+						<h2>Navigational</h2>
+						<p>
+							<ul class="colorlib-footer-links">
+								<li><a href="index.html"><i class="icon-check"></i> Home</a></li>
+								<li><a href="event.html"><i class="icon-check"></i> Events</a></li>
+								<li><a href="#"><i class="icon-check"></i> Blog</a></li>
+								<li><a href="#"><i class="icon-check"></i> Travel</a></li>
+								<li><a href="#"><i class="icon-check"></i> Lifestyle</a></li>
+								<li><a href="#"><i class="icon-check"></i> Fashion</a></li>
+								<li><a href="#"><i class="icon-check"></i> Health</a></li>
+							</ul>
+						</p>
+					</div>
+					<div class="col-md-3">
+						<h2>Recent Post</h2>
+						<div class="f-blog">
+							<a href="blog.html" class="blog-img" style="background-image: url(images/blog-1.jpg);">
+							</a>
+							<div class="desc">
+								<h3><a href="blog2.html">Why ++i operator is better than i++ operator!</a></h3>
+								<p class="admin"><span>26 May 2020</span></p>
+							</div>
+						</div>
+						<div class="f-blog">
+							<a href="blog.html" class="blog-img" style="background-image: url(images/blog-2.jpg);">
+							</a>
+							<div class="desc">
+								<h3><a href="blog4.html">Why Data Structures and Algorithms Are Important to Learn?</a></h3>
+								<p class="admin"><span>26 May 2020</span></p>
+							</div>
+						</div>
+						<div class="f-blog">
+							<a href="#" class="blog-img" style="background-image: url(images/blog-3.jpg);">
+							</a>
+							<div class="desc">
+								<h3><a href="blog4.html">Object Oriented Programming vs Process Oriented Programming</a></h3>
+								<p class="admin"><span>26 May 2020</span></p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<h2>Archive</h2>
+						<p>
+							<ul class="colorlib-footer-links">
+								<li><a href="#"><i class="icon-check"></i> May 2020</a></li>
+								<li><a href="#"><i class="icon-check"></i> June 2020</a></li>
+								<li><a href="#"><i class="icon-check"></i> July 2020</a></li>
+								<li><a href="#"><i class="icon-check"></i> August 2020</a></li>
+								<li><a href="#"><i class="icon-check"></i> September 2020</a></li>
+								<li><a href="#"><i class="icon-check"></i> October 2020</a></li>
+							</ul>
+						</p>
+					</div>
+					<div class="col-md-3">
+						<h2>Tags</h2>
+						<p class="tags">
+							<span><a href="#"><i class="icon-tag"></i> Modeling</a></span>
+							<span><a href="#"><i class="icon-tag"></i> Fashion</a></span>
+							<span><a href="#"><i class="icon-tag"></i> Life</a></span>
+							<span><a href="#"><i class="icon-tag"></i> Blog</a></span>
+							<span><a href="#"><i class="icon-tag"></i> Workout</a></span>
+							<span><a href="#"><i class="icon-tag"></i> Vacation</a></span>
+							<span><a href="#"><i class="icon-tag"></i> Travel</a></span>
+							<span><a href="#"><i class="icon-tag"></i> Exercise</a></span>
+							<span><a href="#"><i class="icon-tag"></i> Health</a></span>
+							<span><a href="#"><i class="icon-tag"></i> News</a></span>
+							<span><a href="#"><i class="icon-tag"></i> Model</a></span>
+							<span><a href="#"><i class="icon-tag"></i> Women</a></span>
+							<span><a href="#"><i class="icon-tag"></i> Animals</a></span>
+							<span><a href="#"><i class="icon-tag"></i> Nature</a></span>
+							<span><a href="#"><i class="icon-tag"></i> Art</a></span>
+							<span><a href="#"><i class="icon-tag"></i> Sea</a></span>
+							<span><a href="#"><i class="icon-tag"></i> Ocean</a></span>
+							<span><a href="#"><i class="icon-tag"></i> Office</a></span>
+							<span><a href="#"><i class="icon-tag"></i> Home</a></span>
+						</p>
+					</div>
+				</div>
+				
+		</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Owl carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+
